@@ -234,7 +234,16 @@
             cursor: pointer;
             box-sizing: border-box;
             text-align: center;
-            white-space: nowrap;
+            white-space: normal;
+            /* 折り返しを有効化 */
+            line-height: 1.4;
+            /* 行間を調整 */
+            min-height: 50px;
+            /* 立体感を出すために高さを確保 */
+            display: flex;
+            /* 上下中央揃えのため */
+            align-items: center;
+            justify-content: center;
         }
 
         .visit-buttons button.active,
@@ -564,7 +573,9 @@
             cursor: pointer;
             box-sizing: border-box;
             text-align: center;
-            white-space: nowrap;
+            white-space: normal;
+            /* 折り返し有効化 */
+            line-height: 1.4;
         }
 
         .symptoms button.active,
@@ -1028,24 +1039,24 @@
             </div>
             <div class="info-text">▼メニューをお選びください▼</div>
             <div class="symptoms">
-                <button type="button" onclick="selectSymptom(this)" data-category="ハンドジェル" data-price="0">クリアジェルオフ別途
-                    (60分)</button>
                 <button type="button" onclick="selectSymptom(this)" data-category="ハンドジェル"
-                    data-price="0">単色カラーorラメグラデーションオフ別途 (90分)</button>
-                <button type="button" onclick="selectSymptom(this)" data-category="ハンドジェル" data-price="0">マグネットジェルオフ別途
-                    (90分)</button>
+                    data-price="0">クリアジェル<br>オフ別途(60分)</button>
+                <button type="button" onclick="selectSymptom(this)" data-category="ハンドジェル"
+                    data-price="0">単色カラーor<br>ラメグラデーション<br>オフ別途 (90分)</button>
+                <button type="button" onclick="selectSymptom(this)" data-category="ハンドジェル"
+                    data-price="0">マグネットジェル<br>オフ別途 (90分)</button>
                 <button type="button" onclick="selectSymptom(this)" data-category="ハンドジェル" data-price="0">フレンチorグラデーション
-                    オフ別途 (90分)</button>
+                    <br>オフ別途 (90分)</button>
                 <button type="button" onclick="selectSymptom(this)" data-category="ハンドジェル" data-price="0">定額ベーシックジェル
-                    単色シンプルアート2～4本オフ込み (120分)</button>
+                    <br>単色シンプルアート2～4本<br>オフ込み (120分)</button>
                 <button type="button" onclick="selectSymptom(this)" data-category="ハンドジェル" data-price="0">定額ジェル
-                    単色シンプルアート4本～8本オフ込み (120分)</button>
+                    <br>単色シンプルアート4本～8本<br>オフ込み (120分)</button>
                 <button type="button" onclick="selectSymptom(this)" data-category="ハンドジェル" data-price="0">定額ジェル
-                    アート6本グラデーションorフレンチ込みオフ込み (120分)</button>
-                <button type="button" onclick="selectSymptom(this)" data-category="ハンドジェル" data-price="0">定額ジェルオフ込み
+                    <br>アート6本グラデーションor<br>フレンチ込みオフ込み <br>(120分)</button>
+                <button type="button" onclick="selectSymptom(this)" data-category="ハンドジェル" data-price="0">定額ジェル<br>オフ込み
                     (120分)</button>
                 <button type="button" onclick="selectSymptom(this)" data-category="ハンドジェル" data-price="0">定額ジェル
-                    デザイン10本アート（フラワーアートや手描きアート等）オフ込み (120分)</button>
+                    <br>デザイン10本アート<br>（フラワーアートや手描きアート等）<br>オフ込み (120分)</button>
             </div>
             <div class="labeltyuuou">
                 <span class="highlight-text">ハンドジェル：オプション</span>
@@ -1062,11 +1073,11 @@
             <div class="info-text">▼メニューをお選びください▼</div>
             <div class="symptoms">
                 <button type="button" onclick="selectSymptom(this)" data-category="ハンドスカルプ" data-price="0">ジェルスカルプチュア10本
-                    (90分)</button>
+                    <br>(90分)</button>
                 <button type="button" onclick="selectSymptom(this)" data-category="ハンドスカルプ" data-price="0">ジェリップジェル10本
-                    (90分)</button>
+                    <br>(90分)</button>
                 <button type="button" onclick="selectSymptom(this)" data-category="ハンドスカルプ" data-price="0">アクリルスカルプチュア
-                    (90分)</button>
+                    <br>(90分)</button>
             </div>
             <div class="labeltyuuou">
                 <span class="highlight-text">ハンドスカルプ：オプション</span>
@@ -1083,15 +1094,15 @@
             <div class="info-text">▼メニューをお選びください▼</div>
             <div class="symptoms">
                 <button type="button" onclick="selectSymptom(this)" data-category="フット" data-price="0">フットバス＋爪カット
-                    (30分)</button>
-                <button type="button" onclick="selectSymptom(this)" data-category="フット" data-price="0">足裏ツルツルケア➕スクラブ付き
-                    (40分)</button>
-                <button type="button" onclick="selectSymptom(this)" data-category="フット" data-price="0">フットバス＋爪カット＋甘皮ケア
-                    (60分)</button>
+                    <br>(30分)</button>
+                <button type="button" onclick="selectSymptom(this)" data-category="フット" data-price="0">足裏ツルツルケア
+                    <br>➕スクラブ付き <br>(40分)</button>
+                <button type="button" onclick="selectSymptom(this)" data-category="フット" data-price="0">フットバス＋爪カット
+                    <br>＋甘皮ケア <br>(60分)</button>
                 <button type="button" onclick="selectSymptom(this)" data-category="フット" data-price="0">フットジェルネイル
-                    (90分)</button>
+                    <br>(90分)</button>
                 <button type="button" onclick="selectSymptom(this)" data-category="フット" data-price="0">単色カラージェル
-                    ※当店2ヶ月以内のジェル付け替えの方 (120分)</button>
+                    <br>※当店2ヶ月以内の<br>ジェル付け替えの方 <br>(120分)</button>
             </div>
             <div class="labeltyuuou">
                 <span class="highlight-text">フット：オプション</span>
@@ -1108,13 +1119,13 @@
             <div class="info-text">▼メニューをお選びください▼</div>
             <div class="symptoms">
                 <button type="button" onclick="selectSymptom(this)" data-category="その他" data-price="0">HAND爪カット
-                    (10分)</button>
+                    <br>(10分)</button>
                 <button type="button" onclick="selectSymptom(this)" data-category="その他" data-price="0">HAND甘皮ケア
-                    (30分)</button>
-                <button type="button" onclick="selectSymptom(this)" data-category="その他" data-price="0">hand and foot ジェル
-                    (210分)</button>
-                <button type="button" onclick="selectSymptom(this)" data-category="その他"
-                    data-price="0">イベント、結婚式、成人式オーダーチップ作成 (60分)</button>
+                    <br>(30分)</button>
+                <button type="button" onclick="selectSymptom(this)" data-category="その他" data-price="0">hand and foot
+                    ジェル <br>(210分)</button>
+                <button type="button" onclick="selectSymptom(this)" data-category="その他" data-price="0">イベント、結婚式、成人式
+                    <br>オーダーチップ作成 <br>(60分)</button>
             </div>
             <!-- その他にはオプションがないが、レイアウト崩れ防止や将来用に空で置くか、無しにするか。Promptには無いので省略 -->
         </div>
@@ -1209,35 +1220,35 @@
 
         // 訪問回数ごとの時間設定 (例：初めて=20分、2回目以降=15分)
         let irradiationsTimes = {
-            'ジェルオフ (+30分)': 30,
-            'ハンドジェル追加 (+60分)': 60,
-            'アート追加 (+30分)': 30
+            'ジェルオフ(+30分)': 30,
+            'ハンドジェル追加(+60分)': 60,
+            'アート追加(+30分)': 30
         };
 
         let selectedirradiationsTime = 0; // 訪問回数で選択された時間
 
         let menuTimes = {
-            'クリアジェルオフ別途 (60分)': 60,
-            '単色カラーorラメグラデーションオフ別途 (90分)': 90,
-            'マグネットジェルオフ別途 (90分)': 90,
-            'フレンチorグラデーション オフ別途 (90分)': 90,
-            '定額ベーシックジェル 単色シンプルアート2～4本オフ込み (120分)': 120,
-            '定額ジェル 単色シンプルアート4本～8本オフ込み (120分)': 120,
-            '定額ジェル アート6本グラデーションorフレンチ込みオフ込み (120分)': 120,
-            '定額ジェルオフ込み (120分)': 120,
-            '定額ジェル デザイン10本アート（フラワーアートや手描きアート等）オフ込み (120分)': 120,
-            'ジェルスカルプチュア10本 (90分)': 90,
-            'ジェリップジェル10本 (90分)': 90,
-            'アクリルスカルプチュア (90分)': 90,
-            'フットバス＋爪カット (30分)': 30,
-            '足裏ツルツルケア➕スクラブ付き (40分)': 40,
-            'フットバス＋爪カット＋甘皮ケア (60分)': 60,
-            'フットジェルネイル (90分)': 90,
-            '単色カラージェル ※当店2ヶ月以内のジェル付け替えの方 (120分)': 120,
-            'HAND爪カット (10分)': 10,
-            'HAND甘皮ケア (30分)': 30,
-            'hand and foot ジェル (210分)': 210,
-            'イベント、結婚式、成人式オーダーチップ作成 (60分)': 60
+            'クリアジェルオフ別途(60分)': 60,
+            '単色カラーorラメグラデーションオフ別途(90分)': 90,
+            'マグネットジェルオフ別途(90分)': 90,
+            'フレンチorグラデーションオフ別途(90分)': 90,
+            '定額ベーシックジェル単色シンプルアート2～4本オフ込み(120分)': 120,
+            '定額ジェル単色シンプルアート4本～8本オフ込み(120分)': 120,
+            '定額ジェルアート6本グラデーションorフレンチ込みオフ込み(120分)': 120,
+            '定額ジェルオフ込み(120分)': 120,
+            '定額ジェルデザイン10本アート（フラワーアートや手描きアート等）オフ込み(120分)': 120,
+            'ジェルスカルプチュア10本(90分)': 90,
+            'ジェリップジェル10本(90分)': 90,
+            'アクリルスカルプチュア(90分)': 90,
+            'フットバス＋爪カット(30分)': 30,
+            '足裏ツルツルケア➕スクラブ付き(40分)': 40,
+            'フットバス＋爪カット＋甘皮ケア(60分)': 60,
+            'フットジェルネイル(90分)': 90,
+            '単色カラージェル※当店2ヶ月以内のジェル付け替えの方(120分)': 120,
+            'HAND爪カット(10分)': 10,
+            'HAND甘皮ケア(30分)': 30,
+            'handandfootジェル(210分)': 210,
+            'イベント、結婚式、成人式オーダーチップ作成(60分)': 60
         };
 
 
@@ -1421,7 +1432,7 @@
 
             // 選択済みから再計算
             updatedSelectedButtons.forEach((btn) => {
-                const selectedMenuName = btn.textContent;
+                const selectedMenuName = btn.textContent.replace(/\s+/g, '').trim();
                 const category = btn.getAttribute('data-category');
                 selectedSymptom.push({ category, name: selectedMenuName });
                 selectedMenuTime += menuTimes[selectedMenuName] || 0;
@@ -1470,14 +1481,14 @@
 
             // 2) 元ボタン（.symptoms）を非アクティブ化
             const srcBtn = [...document.querySelectorAll('.symptoms button')].find(
-                b => b.textContent === name && b.getAttribute('data-category') === category
+                b => b.textContent.replace(/\s+/g, '').trim() === name && b.getAttribute('data-category') === category
             );
             if (srcBtn) srcBtn.classList.remove('active');
 
             // 3) 配列は「今アクティブな症状ボタン」から再構築してズレを無くす
             selectedSymptom = [...document.querySelectorAll('.symptoms button.active')].map(b => ({
                 category: b.getAttribute('data-category'),
-                name: b.textContent
+                name: b.textContent.replace(/\s+/g, '').trim()
             }));
 
             // 4) 時間・価格を再計算（activeボタンから）
@@ -1486,7 +1497,7 @@
             selectedSymptom.forEach(item => {
                 selectedMenuTime += (menuTimes[item.name] || 0);
                 const btn = [...document.querySelectorAll('.symptoms button')].find(
-                    b => b.textContent === item.name && b.getAttribute('data-category') === item.category
+                    b => b.textContent.replace(/\s+/g, '').trim() === item.name && b.getAttribute('data-category') === item.category
                 );
                 if (btn) menuPrice += parseInt(btn.getAttribute('data-price') || '0', 10);
             });
@@ -1549,7 +1560,7 @@
 
             // 選択されたオプションを取得
             const selectedButtons = document.querySelectorAll('.irradiations button.active');
-            const selectedIrradiations = Array.from(selectedButtons).map(btn => btn.innerText);
+            const selectedIrradiations = Array.from(selectedButtons).map(btn => btn.textContent.replace(/\s+/g, '').trim());
             irradiationsCount = selectedIrradiations.join(', ');
 
             // すべてのオプションの価格を再計算
@@ -1560,7 +1571,7 @@
                 optionsPrice += price;
 
                 // 各オプションの時間を加算
-                const irradiationName = btn.innerText;
+                const irradiationName = btn.textContent.replace(/\s+/g, '').trim();
                 const irradiationTime = irradiationsTimes[irradiationName] || 0;
                 totalirradiationsTime += irradiationTime;
             });
@@ -1589,7 +1600,7 @@
             document.getElementById('firstVisit').classList.remove('active');
             document.getElementById('repeatVisit').classList.remove('active');
             element.classList.add('active');
-            visitCount = element.innerText;
+            visitCount = element.textContent.replace(/\s+/g, ' ').trim();
 
             // 選択された訪問回数に対応する時間を取得
             selectedVisitTime = visitTimes[visitCount];
@@ -1922,7 +1933,7 @@
                             }
                             // ▲▲▲ ここまで変更 ▲▲▲
                         });
-                        if (overlapping >= 3) { overLimit = true; break; }
+                        if (overlapping >= 2) { overLimit = true; break; }
                     }
 
                     // 最終的な可否判定
@@ -2094,5 +2105,3 @@
 </body>
 
 </html>
-
-
