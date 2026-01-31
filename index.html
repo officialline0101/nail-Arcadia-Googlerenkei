@@ -1878,7 +1878,7 @@
                     }
 
                     // 19時以降に終了する予約は✕
-                    if (slotEnd.getHours() === 19 && slotEnd.getMinutes() > 0 || slotEnd.getHours() > 19) {
+                    if (slotEnd.getHours() === 21 && slotEnd.getMinutes() > 0 || slotEnd.getHours() > 21) {
                         cell.textContent = '✕';
                         cell.classList.add('unavailable');
                         continue;
@@ -2107,4 +2107,5 @@
 </body>
 
 </html>
+
 
