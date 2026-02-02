@@ -1877,8 +1877,12 @@
                         continue;
                     }
 
-                    // 19時以降に終了する予約は✕
-                    if (slotEnd.getHours() === 21 && slotEnd.getMinutes() > 0 || slotEnd.getHours() > 21) {
+// 日曜日(0)なら19時、それ以外は21時を閉店時間とする
+                    const closeHour = day.getDay() === 0 ? 19 : 21;
+
+                    // 指定した閉店時間以降に終了する予約は✕
+                    // (例: 19:00終了はOK、19:01終了はNG)
+                    if (slotEnd.getHours() > closeHour || (slotEnd.getHours() === closeHour && slotEnd.getMinutes() > 0)) {
                         cell.textContent = '✕';
                         cell.classList.add('unavailable');
                         continue;
@@ -2107,5 +2111,6 @@
 </body>
 
 </html>
+
 
 
