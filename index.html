@@ -1949,10 +1949,6 @@
                     } else if (isBusinessEventTime && overLimit) {
                         cell.textContent = '✕';
                         cell.classList.add('unavailable');
-                    } else if (slotStart.getDay() === 0 && !isBusinessDay && businessEventTimes.length === 0) {
-                        // 日曜日で、営業日でない場合は ✕
-                        cell.textContent = '✕';
-                        cell.classList.add('unavailable');
                     } else if (isBusinessDay && !overLimit) {
                         cell.textContent = '◯';
                         cell.classList.add('available');
@@ -2111,6 +2107,7 @@
 </body>
 
 </html>
+
 
 
 
