@@ -15,7 +15,7 @@
             /* さらに右へ */
             top: 80%;
             /* 画面中央に固定 */
-            transform: translateY(-50%) translateX(10px);
+            transform: translateY(-50%) translateX(16px);
             /* 中央配置と右ずらし */
             background: #3e3f41;
             display: flex;
@@ -96,7 +96,7 @@
             background-color: #fdfdfd;
             border-radius: 12px;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-            width: 90%;
+            width: 96%;
             max-width: 500px;
             padding: 25px;
             box-sizing: border-box;
@@ -701,6 +701,8 @@
             outline: 1px solid #2b2b2b;
             /* ここで枠線を指定 */
             outline-offset: 2px;
+    /* 外側に色を追加 */
+    box-shadow: 0 0 0 3px #555555
         }
 
         /* 必須マークのスタイル */
@@ -1072,18 +1074,9 @@
             </div>
             <div class="info-text">▼メニューをお選びください▼</div>
             <div class="symptoms">
-                <button type="button" onclick="selectSymptom(this)" data-category="ハンドスカルプ" data-price="0">ジェルスカルプチュア10本
-                    <br>(90分)</button>
-                <button type="button" onclick="selectSymptom(this)" data-category="ハンドスカルプ" data-price="0">ジェリップジェル10本
-                    <br>(90分)</button>
-                <button type="button" onclick="selectSymptom(this)" data-category="ハンドスカルプ" data-price="0">アクリルスカルプチュア
-                    <br>(90分)</button>
-            </div>
-            <div class="labeltyuuou">
-                <span class="highlight-text">ハンドスカルプ：オプション</span>
-            </div>
-            <div class="irradiations">
-                <button type="button" onclick="selectirradiations(this)" data-price="0">ハンドジェル追加 (+60分)</button>
+                <button type="button" onclick="selectSymptom(this)" data-category="ハンドスカルプ" data-price="0">ジェルスカルプチュア10本<br>+<br>ジェル単色カラー(120分)</button>
+                <button type="button" onclick="selectSymptom(this)" data-category="ハンドスカルプ" data-price="0">ジェリップジェル10本<br>+<br>ジェル単色カラー(120分)</button>
+                <button type="button" onclick="selectSymptom(this)" data-category="ハンドスカルプ" data-price="0">アクリルスカルプチュア<br>+<br>ジェル単色カラー(120分)</button>
             </div>
         </div>
 
@@ -2107,7 +2100,6 @@
 </body>
 
 </html>
-
 
 
 
