@@ -1042,13 +1042,13 @@
             <div class="info-text">▼メニューをお選びください▼</div>
             <div class="symptoms">
                 <button type="button" onclick="selectSymptom(this)" data-category="ハンドジェル"
-                    data-price="0">クリアジェル<br>オフ別途(60分)</button>
+                    data-price="0">クリアジェル<br>オフ込み (90分)</button>
                 <button type="button" onclick="selectSymptom(this)" data-category="ハンドジェル"
-                    data-price="0">単色カラーor<br>ラメグラデーション<br>オフ別途 (90分)</button>
+                    data-price="0">単色カラーor<br>ラメグラデーション<br>オフ込み (120分)</button>
                 <button type="button" onclick="selectSymptom(this)" data-category="ハンドジェル"
-                    data-price="0">マグネットジェル<br>オフ別途 (90分)</button>
+                    data-price="0">マグネットジェル<br>オフ込み (120分)</button>
                 <button type="button" onclick="selectSymptom(this)" data-category="ハンドジェル" data-price="0">フレンチorグラデーション
-                    <br>オフ別途 (90分)</button>
+                    <br>オフ込み (120分)</button>
                 <button type="button" onclick="selectSymptom(this)" data-category="ハンドジェル" data-price="0">定額ベーシックジェル
                     <br>単色シンプルアート2～4本<br>オフ込み (120分)</button>
                 <button type="button" onclick="selectSymptom(this)" data-category="ハンドジェル" data-price="0">定額ジェル
@@ -1064,7 +1064,7 @@
                 <span class="highlight-text">ハンドジェル：オプション</span>
             </div>
             <div class="irradiations">
-                <button type="button" onclick="selectirradiations(this)" data-price="0">ジェルオフ (+30分)</button>
+                <button type="button" onclick="selectirradiations(this)" data-price="0">他店オフあり</button>
             </div>
         </div>
 
@@ -1093,9 +1093,9 @@
                 <button type="button" onclick="selectSymptom(this)" data-category="フット" data-price="0">フットバス＋爪カット
                     <br>＋甘皮ケア <br>(60分)</button>
                 <button type="button" onclick="selectSymptom(this)" data-category="フット" data-price="0">フットジェルネイル
-                    <br>(90分)</button>
-                <button type="button" onclick="selectSymptom(this)" data-category="フット" data-price="0">単色カラージェル
-                    <br>※当店2ヶ月以内の<br>ジェル付け替えの方 <br>(120分)</button>
+                    <br>※フットバス+爪カット+甘皮ケア付き<br>(90分)</button>
+                <button type="button" onclick="selectSymptom(this)" data-category="フット" data-price="0">フットジェルネイル
+                    <br>※当店2ヶ月以内付け替え<br>ご来店の方<br>（120分）</button>
             </div>
             <div class="labeltyuuou">
                 <span class="highlight-text">フット：オプション</span>
@@ -1111,11 +1111,11 @@
             </div>
             <div class="info-text">▼メニューをお選びください▼</div>
             <div class="symptoms">
-                <button type="button" onclick="selectSymptom(this)" data-category="その他" data-price="0">HAND爪カット
+                <button type="button" onclick="selectSymptom(this)" data-category="その他" data-price="0">ハンド爪カット
                     <br>(10分)</button>
-                <button type="button" onclick="selectSymptom(this)" data-category="その他" data-price="0">HAND甘皮ケア
+                <button type="button" onclick="selectSymptom(this)" data-category="その他" data-price="0">ハンド甘皮ケア
                     <br>(30分)</button>
-                <button type="button" onclick="selectSymptom(this)" data-category="その他" data-price="0">hand and foot
+                <button type="button" onclick="selectSymptom(this)" data-category="その他" data-price="0">ハンド & フット
                     ジェル <br>(210分)</button>
                 <button type="button" onclick="selectSymptom(this)" data-category="その他" data-price="0">イベント、結婚式、成人式
                     <br>オーダーチップ作成 <br>(60分)</button>
@@ -1213,6 +1213,7 @@
 
         // 訪問回数ごとの時間設定 (例：初めて=20分、2回目以降=15分)
         let irradiationsTimes = {
+            '他店オフあり': 30,
             'ジェルオフ(+30分)': 30,
             'ハンドジェル追加(+60分)': 60,
             'アート追加(+30分)': 30
@@ -1221,29 +1222,26 @@
         let selectedirradiationsTime = 0; // 訪問回数で選択された時間
 
         let menuTimes = {
-            'ジェルスカルプチュア10本+ジェル単色カラー(120分)': 60,
-            'ジェリップジェル10本+ジェル単色カラー(120分)': 60,
-            'アクリルスカルプチュア+ジェル単色カラー(120分)': 60,
-            'クリアジェルオフ別途(60分)': 60,
-            '単色カラーorラメグラデーションオフ別途(90分)': 90,
-            'マグネットジェルオフ別途(90分)': 90,
-            'フレンチorグラデーションオフ別途(90分)': 90,
+            'クリアジェルオフ込み(90分)': 90,
+            '単色カラーorラメグラデーションオフ込み(120分)': 120,
+            'マグネットジェルオフ込み(120分)': 120,
+            'フレンチorグラデーションオフ込み(120分)': 120,
             '定額ベーシックジェル単色シンプルアート2～4本オフ込み(120分)': 120,
             '定額ジェル単色シンプルアート4本～8本オフ込み(120分)': 120,
             '定額ジェルアート6本グラデーションorフレンチ込みオフ込み(120分)': 120,
             '定額ジェルオフ込み(120分)': 120,
             '定額ジェルデザイン10本アート（フラワーアートや手描きアート等）オフ込み(120分)': 120,
-            'ジェルスカルプチュア10本(90分)': 90,
-            'ジェリップジェル10本(90分)': 90,
-            'アクリルスカルプチュア(90分)': 90,
+            'ジェルスカルプチュア10本+ジェル単色カラー(120分)': 120,
+            'ジェリップジェル10本+ジェル単色カラー(120分)': 120,
+            'アクリルスカルプチュア+ジェル単色カラー(120分)': 120,
             'フットバス＋爪カット(30分)': 30,
             '足裏ツルツルケア➕スクラブ付き(40分)': 40,
             'フットバス＋爪カット＋甘皮ケア(60分)': 60,
-            'フットジェルネイル(90分)': 90,
-            '単色カラージェル※当店2ヶ月以内のジェル付け替えの方(120分)': 120,
-            'HAND爪カット(10分)': 10,
-            'HAND甘皮ケア(30分)': 30,
-            'handandfootジェル(210分)': 210,
+            'フットジェルネイル※フットバス+爪カット+甘皮ケア付き(90分)': 90,
+            'フットジェルネイル※当店2ヶ月以内付け替えご来店の方（120分）': 120,
+            'ハンド爪カット(10分)': 10,
+            'ハンド甘皮ケア(30分)': 30,
+            'ハンド&フットジェル(210分)': 210,
             'イベント、結婚式、成人式オーダーチップ作成(60分)': 60
         };
 
