@@ -1882,8 +1882,8 @@
                         continue;
                     }
 
-                    // 土日は10:00開始なので、9:00代は×
-                    if ((slotStart.getDay() === 0 || slotStart.getDay() === 6) && slotStart.getHours() < 10) {
+                    // 土日は9:00開始なので、9:00より前は×
+                    if ((slotStart.getDay() === 0 || slotStart.getDay() === 6) && slotStart.getHours() < 9) {
                         cell.textContent = '✕';
                         cell.classList.add('unavailable');
                         continue;
@@ -2101,6 +2101,3 @@
 </body>
 
 </html>
-
-
-
